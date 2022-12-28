@@ -126,7 +126,7 @@ const Home = () => {
                       creatorEths={creator.sumall}
                     />
                   ))}
-                  {[6, 7, 8, 9, 10].map((i) => (
+                  {/* {[6, 7, 8, 9, 10].map((i) => (
                     <CreatorCard
                       key={`creator-${i}`}
                       rank={i}
@@ -134,7 +134,7 @@ const Home = () => {
                       creatorName={`0x${makeId(3)}...${makeId(4)}`}
                       creatorEths={10 - i * 0.534}
                     />
-                  ))}
+                  ))} */}
                   {!hideButtons && (
                     <>
                       <div onClick={() => handleScroll('left')} className="absolute w-8 h-8 minlg:w-12 minlg:h-12 top-45 cursor-pointer left-0">

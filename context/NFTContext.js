@@ -174,7 +174,7 @@ export const NFTProvider = ({ children }) => {
     const connection = await web3Modal.connect();
     const provider = new ethers.providers.Web3Provider(connection);
     const signer = provider.getSigner();
-    const contract = new ethers.Contract(MarketAddress, MarketAddressABI, signer);
+    const contract = fetchContract(signer);
 
     const price = ethers.utils.parseUnits(nft.price.toString(), 'ether');
     const transaction = await contract.createMarketSale(nft.tokenId, { value: price });
